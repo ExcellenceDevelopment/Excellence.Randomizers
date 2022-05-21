@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sources", "Sources", "{F3D0BB2F-93B1-4988-B5B8-BC6F289A145E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FC40C7D9-5855-4102-A488-73D6271622A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{AF143C5A-0E23-44AC-960D-B67FD70BD7A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{14BFB5B7-629A-47F7-9A5D-825FE02262EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excellence.Randomizers", "Sources\Excellence.Randomizers\Excellence.Randomizers.csproj", "{33930997-70FF-46C2-96F2-1E7B1C92552C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excellence.Randomizers.Tests", "Tests\Excellence.Randomizers.Tests\Excellence.Randomizers.Tests.csproj", "{46F4EFBF-2016-4350-935E-28D171D8BD02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excellence.Randomizers.Core", "Sources\Excellence.Randomizers.Core\Excellence.Randomizers.Core.csproj", "{34928072-52B0-4FC0-9590-A6C9015371CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.0.0", "1.0.0", "{088E3BE5-6504-4A2E-9D0F-52D5F3A338E5}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\1.0.0\Usage.md = Docs\1.0.0\Usage.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{89AA548D-1BFA-4306-A863-0C6B033DCF9C}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\Tools\Docs Generation Tools.md = Docs\Tools\Docs Generation Tools.md
+		Docs\Tools\Test Coverage Reports Generation Tool.md = Docs\Tools\Test Coverage Reports Generation Tool.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{A2DBAFCD-BAB0-47D2-9DAD-468758AF9259}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\Build\Build.ps1 = Scripts\Build\Build.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1E94DEFB-2F13-42C6-B634-666C8FACEE04}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\Tests\Test and Cover All Frameworks.ps1 = Scripts\Tests\Test and Cover All Frameworks.ps1
+		Scripts\Tests\Test and Cover.ps1 = Scripts\Tests\Test and Cover.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nugets", "Nugets", "{E1DC3227-A16E-47F1-A672-9FA9ACAB733C}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\Nugets\Nugets Create.ps1 = Scripts\Nugets\Nugets Create.ps1
+		Scripts\Nugets\Nuget Create Randomizers.Core.ps1 = Scripts\Nugets\Nuget Create Randomizers.Core.ps1
+		Scripts\Nugets\Nuget Create Randomizers.ps1 = Scripts\Nugets\Nuget Create Randomizers.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{D7EB9866-A8F7-4FB1-B2C8-E15D575D7F46}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\Docs\Docs Config Template.json = Scripts\Docs\Docs Config Template.json
+		Scripts\Docs\Docs Generate.ps1 = Scripts\Docs\Docs Generate.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ContinuousIntegration", "ContinuousIntegration", "{0EB307DE-DC9E-41B0-A078-FC417082C66E}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\ContinuousIntegration\Run.ps1 = Scripts\ContinuousIntegration\Run.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nugets", "Nugets", "{DD506DBF-917C-4D72-8078-7A1F3544ACE2}"
+	ProjectSection(SolutionItems) = preProject
+		Nugets\Icon.png = Nugets\Icon.png
+		Nugets\Readme.md = Nugets\Readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{33930997-70FF-46C2-96F2-1E7B1C92552C} = {F3D0BB2F-93B1-4988-B5B8-BC6F289A145E}
+		{46F4EFBF-2016-4350-935E-28D171D8BD02} = {FC40C7D9-5855-4102-A488-73D6271622A3}
+		{34928072-52B0-4FC0-9590-A6C9015371CD} = {F3D0BB2F-93B1-4988-B5B8-BC6F289A145E}
+		{088E3BE5-6504-4A2E-9D0F-52D5F3A338E5} = {AF143C5A-0E23-44AC-960D-B67FD70BD7A3}
+		{89AA548D-1BFA-4306-A863-0C6B033DCF9C} = {AF143C5A-0E23-44AC-960D-B67FD70BD7A3}
+		{A2DBAFCD-BAB0-47D2-9DAD-468758AF9259} = {14BFB5B7-629A-47F7-9A5D-825FE02262EE}
+		{1E94DEFB-2F13-42C6-B634-666C8FACEE04} = {14BFB5B7-629A-47F7-9A5D-825FE02262EE}
+		{E1DC3227-A16E-47F1-A672-9FA9ACAB733C} = {14BFB5B7-629A-47F7-9A5D-825FE02262EE}
+		{D7EB9866-A8F7-4FB1-B2C8-E15D575D7F46} = {14BFB5B7-629A-47F7-9A5D-825FE02262EE}
+		{0EB307DE-DC9E-41B0-A078-FC417082C66E} = {14BFB5B7-629A-47F7-9A5D-825FE02262EE}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33930997-70FF-46C2-96F2-1E7B1C92552C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33930997-70FF-46C2-96F2-1E7B1C92552C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33930997-70FF-46C2-96F2-1E7B1C92552C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33930997-70FF-46C2-96F2-1E7B1C92552C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46F4EFBF-2016-4350-935E-28D171D8BD02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46F4EFBF-2016-4350-935E-28D171D8BD02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46F4EFBF-2016-4350-935E-28D171D8BD02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46F4EFBF-2016-4350-935E-28D171D8BD02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34928072-52B0-4FC0-9590-A6C9015371CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34928072-52B0-4FC0-9590-A6C9015371CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34928072-52B0-4FC0-9590-A6C9015371CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34928072-52B0-4FC0-9590-A6C9015371CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

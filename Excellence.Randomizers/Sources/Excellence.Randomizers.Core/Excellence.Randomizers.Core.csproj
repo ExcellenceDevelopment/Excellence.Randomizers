@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net5.0;net6.0;netstandard2.0</TargetFrameworks>
+        <LangVersion>default</LangVersion>
+        <Nullable>enable</Nullable>
+
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <IsPackable>true</IsPackable>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <PackageId>Excellence.Randomizers.Core</PackageId>
+        <PackageVersion>1.0.0</PackageVersion>
+        <Title>Excellence.Randomizers.Core</Title>
+        <Authors>Excellence Development;Roman Doskoch</Authors>
+        <Description>Interfaces for Randomizers.</Description>
+        <PackageProjectUrl>https://github.com/ExcellenceDevelopment/Excellence.Randomizers</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/ExcellenceDevelopment/Excellence.Randomizers</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>Excellence.Randomizers.Core</PackageTags>
+        <PackageIcon>Icon.png</PackageIcon>
+        <PackageReadmeFile>Readme.md</PackageReadmeFile>
+        <Copyright>© Excellence Development, Roman Doskoch. All rights reserved.</Copyright>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <DocumentationFile>Excellence.Randomizers.Core.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <AssemblyAttribute Include="CLSCompliantAttribute">
+            <_Parameter1>true</_Parameter1>
+        </AssemblyAttribute>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="..\..\Nugets\Readme.md">
+            <Pack>true</Pack>
+            <PackagePath>\</PackagePath>
+        </Content>
+
+        <Content Include="..\..\Nugets\Icon.png">
+            <Pack>true</Pack>
+            <PackagePath>\</PackagePath>
+        </Content>
+    </ItemGroup>
+
+</Project>

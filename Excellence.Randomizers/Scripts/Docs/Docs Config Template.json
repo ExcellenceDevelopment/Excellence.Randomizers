@@ -1,0 +1,9 @@
+{
+    "AssemblyFilePath": "{{{solutionRoot}}}\\Sources\\Excellence.Randomizers.Core\\bin\\Release\\{{{framework}}}\\Excellence.Randomizers.Core.dll",
+    "AssemblyPageName": "Excellence.Randomizers",
+    "GeneratedPages": "Types",
+    "GeneratedAccessModifiers": "Public",
+    "FileNameFactory": "Name",
+    "Markdown.InvalidCharReplacement": "_",
+    "OutputDirectoryPath": "{{{solutionRoot}}}\\Local\\Docs\\{{{framework}}}"
+}

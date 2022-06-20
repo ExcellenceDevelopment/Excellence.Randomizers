@@ -6,6 +6,8 @@ using Excellence.Randomizers.Constants;
 using Excellence.Randomizers.Core;
 using Excellence.Randomizers.Utils;
 
+using Newtonsoft.Json;
+
 namespace Excellence.Randomizers
 {
     /// <inheritdoc />
@@ -13,38 +15,20 @@ namespace Excellence.Randomizers
         where TConfiguration : IConfigurationCore<TItem, TConfiguration>
     {
         /// <inheritdoc />
+        [JsonProperty]
         public IEnumerable<TItem> Items { get; protected set; } = Enumerable.Empty<TItem>();
 
         /// <inheritdoc />
+        [JsonProperty]
         public int MinCount { get; protected set; }
 
         /// <inheritdoc />
+        [JsonProperty]
         public int MaxCount { get; protected set; }
 
         /// <inheritdoc />
+        [JsonProperty]
         public bool UniqueOnly { get; protected set; }
-
-        /// <inheritdoc />
-        public virtual TConfiguration Use(IEnumerable<TItem> items, int minCount, int maxCount, bool uniqueOnly = false)
-        {
-            var itemsCollection = items?.ToList();
-
-            ExceptionUtils.Process(itemsCollection, ExceptionUtils.IsNull, () => new ArgumentNullException(nameof(items)));
-            ExceptionUtils.Process(minCount, (param) => param < 0, () => new ArgumentException(String.Format(Messages.Errors.LessThanZero, nameof(minCount))));
-            ExceptionUtils.Process(maxCount, (param) => param < 0, () => new ArgumentException(String.Format(Messages.Errors.LessThanZero, nameof(maxCount))));
-            ExceptionUtils.Process(() => minCount > maxCount, () => new ArgumentException(String.Format(Messages.Errors.GreaterThan, nameof(minCount), nameof(maxCount))));
-
-            ExceptionUtils.Process
-            (
-                () => uniqueOnly && itemsCollection!.Distinct().ToList().Count < maxCount,
-                () => new ArgumentException(String.Format(Messages.Errors.NoEnoughUniqueItems, nameof(items), maxCount))
-            );
-
-            return this.UseItems(itemsCollection!)
-                .UseMinCount(minCount)
-                .UseMaxCount(maxCount)
-                .UseUnique(uniqueOnly);
-        }
 
         /// <inheritdoc />
         public virtual TConfiguration UseItems(IEnumerable<TItem> items)
@@ -60,7 +44,7 @@ namespace Excellence.Randomizers
 
         /// <inheritdoc />
         public virtual TConfiguration UseItems(params TItem[] items) =>
-            this.UseItems(items?.ToList()!);
+            this.UseItems((IEnumerable<TItem>)items);
 
         /// <inheritdoc />
         public virtual TConfiguration UseMinCount(int minCount)

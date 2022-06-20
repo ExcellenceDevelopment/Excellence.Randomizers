@@ -51,7 +51,7 @@ namespace Excellence.Randomizers.Tests
 
             var collection = new List<int>() { 1, 2, 3, 4, 5 };
 
-            var result= sut.Shuffle(collection).ToList();
+            var result = sut.Shuffle(collection).ToList();
 
             Assert.Equal(result.Count, collection.Count);
         }

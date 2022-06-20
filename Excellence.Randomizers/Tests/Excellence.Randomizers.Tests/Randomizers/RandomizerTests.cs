@@ -55,10 +55,11 @@ namespace Excellence.Randomizers.Tests
                 .UseMaxCount(5)
                 .UseUnique(true);
 
-            // or
-
-            var configuration3 = new Configuration<int>();
-            configuration3.Use(new List<int>() { 1, 3, 5, 7, 9 }, 2, 4, false);
+            var configuration3 = new Configuration<int>()
+                .UseItems(new List<int>() { 1, 3, 5, 7, 9 })
+                .UseMinCount(2)
+                .UseMaxCount(4)
+                .UseUnique(false);
 
             var randomGenerator = new DefaultRandomGenerator();
             var shuffler = new KnuthShuffler(randomGenerator);

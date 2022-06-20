@@ -34,16 +34,6 @@ namespace Excellence.Randomizers.Core
         /// Adds the items.
         /// </summary>
         /// <param name="items">The items.</param>
-        /// <param name="minCount">The minimum number of items (inclusive).</param>
-        /// <param name="maxCount">The maximum number of items (inclusive).</param>
-        /// <param name="uniqueOnly"><see langword="true"/> when unique (non-repeating) items should be used in the resulting set or <see langword="false"/> when repeats are allowed.</param>
-        /// <returns>The current instance.</returns>
-        public TConfiguration Use(IEnumerable<TItem> items, int minCount, int maxCount, bool uniqueOnly = false);
-
-        /// <summary>
-        /// Adds the items.
-        /// </summary>
-        /// <param name="items">The items.</param>
         /// <returns>The current instance.</returns>
         public TConfiguration UseItems(IEnumerable<TItem> items);
 

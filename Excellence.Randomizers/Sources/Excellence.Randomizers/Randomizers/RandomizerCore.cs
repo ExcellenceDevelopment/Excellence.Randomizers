@@ -53,7 +53,7 @@ namespace Excellence.Randomizers
         }
 
         /// <inheritdoc />
-        public virtual TRandomizer Use(params TConfiguration[] configurations) => this.Use(configurations?.ToList()!);
+        public virtual TRandomizer Use(params TConfiguration[] configurations) => this.Use((IEnumerable<TConfiguration>)configurations);
 
         /// <inheritdoc />
         public virtual IEnumerable<TItem> Next()

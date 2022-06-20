@@ -4,12 +4,6 @@
         <name>Excellence.Randomizers.Core</name>
     </assembly>
     <members>
-        <member name="T:Excellence.Randomizers.Core.IConfiguration`1">
-            <summary>
-            The configuration.
-            </summary>
-            <typeparam name="TItem">The item type.</typeparam>
-        </member>
         <member name="T:Excellence.Randomizers.Core.IConfigurationCore`2">
             <summary>
             The core configuration.
@@ -36,16 +30,6 @@
             <summary>
             Indicates if unique items should be used in the resulting set.
             </summary>
-        </member>
-        <member name="M:Excellence.Randomizers.Core.IConfigurationCore`2.Use(System.Collections.Generic.IEnumerable{`0},System.Int32,System.Int32,System.Boolean)">
-            <summary>
-            Adds the items.
-            </summary>
-            <param name="items">The items.</param>
-            <param name="minCount">The minimum number of items (inclusive).</param>
-            <param name="maxCount">The maximum number of items (inclusive).</param>
-            <param name="uniqueOnly"><see langword="true"/> when unique (non-repeating) items should be used in the resulting set or <see langword="false"/> when repeats are allowed.</param>
-            <returns>The current instance.</returns>
         </member>
         <member name="M:Excellence.Randomizers.Core.IConfigurationCore`2.UseItems(System.Collections.Generic.IEnumerable{`0})">
             <summary>
@@ -87,6 +71,27 @@
             Copies the configuration.
             </summary>
             <returns>The new instance.</returns>
+        </member>
+        <member name="T:Excellence.Randomizers.Core.IConfigurationCoreJsonUtils`2">
+            <summary>
+            The core configuration JSON utils.
+            </summary>
+            <typeparam name="TItem">The item type.</typeparam>
+            <typeparam name="TConfiguration">The configuration type.</typeparam>
+        </member>
+        <member name="M:Excellence.Randomizers.Core.IConfigurationCoreJsonUtils`2.UseFromJson(System.String,Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Sets configuration properties from JSON.
+            </summary>
+            <param name="json">The JSON.</param>
+            <param name="jsonSerializerSettings">The serializer settings.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Excellence.Randomizers.Core.IConfiguration`1">
+            <summary>
+            The configuration.
+            </summary>
+            <typeparam name="TItem">The item type.</typeparam>
         </member>
         <member name="T:Excellence.Randomizers.Core.IRandomGenerator">
             <summary>

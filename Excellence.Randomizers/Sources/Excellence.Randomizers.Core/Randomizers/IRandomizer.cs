@@ -1,4 +1,6 @@
-﻿namespace Excellence.Randomizers.Core
+﻿using Excellence.Randomizers.Core.Configurations;
+
+namespace Excellence.Randomizers.Core
 {
     /// <summary>
     /// The randomizer.

@@ -1,11 +1,11 @@
 ﻿using System;
 
 using Excellence.Randomizers.Constants;
-using Excellence.Randomizers.Core;
+using Excellence.Randomizers.Core.RandomGenerators;
 using Excellence.Randomizers.Providers;
 using Excellence.Randomizers.Utils;
 
-namespace Excellence.Randomizers
+namespace Excellence.Randomizers.RandomGenerators
 {
     /// <inheritdoc />
     public class DefaultRandomGenerator : IRandomGenerator

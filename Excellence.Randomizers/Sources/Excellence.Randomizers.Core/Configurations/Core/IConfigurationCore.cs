@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Excellence.Randomizers.Core
+namespace Excellence.Randomizers.Core.Configurations.Core
 {
     /// <summary>
     /// The core configuration.
@@ -29,16 +29,6 @@ namespace Excellence.Randomizers.Core
         /// Indicates if unique items should be used in the resulting set.
         /// </summary>
         public bool UniqueOnly { get; }
-
-        /// <summary>
-        /// Adds the items.
-        /// </summary>
-        /// <param name="items">The items.</param>
-        /// <param name="minCount">The minimum number of items (inclusive).</param>
-        /// <param name="maxCount">The maximum number of items (inclusive).</param>
-        /// <param name="uniqueOnly"><see langword="true"/> when unique (non-repeating) items should be used in the resulting set or <see langword="false"/> when repeats are allowed.</param>
-        /// <returns>The current instance.</returns>
-        public TConfiguration Use(IEnumerable<TItem> items, int minCount, int maxCount, bool uniqueOnly = false);
 
         /// <summary>
         /// Adds the items.

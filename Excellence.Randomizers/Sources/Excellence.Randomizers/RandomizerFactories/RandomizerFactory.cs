@@ -1,9 +1,12 @@
 ﻿using System;
 
 using Excellence.Randomizers.Core;
+using Excellence.Randomizers.Core.RandomGenerators;
+using Excellence.Randomizers.Core.RandomizerFactories;
+using Excellence.Randomizers.Core.Shufflers;
 using Excellence.Randomizers.Utils;
 
-namespace Excellence.Randomizers
+namespace Excellence.Randomizers.RandomizerFactories
 {
     /// <inheritdoc />
     public class RandomizerFactory : IRandomizerFactory

@@ -1,4 +1,4 @@
-﻿namespace Excellence.Randomizers.Core
+﻿namespace Excellence.Randomizers.Core.RandomizerFactories
 {
     /// <summary>
     /// The randomizer factory.

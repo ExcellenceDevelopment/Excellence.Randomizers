@@ -1,4 +1,7 @@
 ﻿using Excellence.Randomizers.Core;
+using Excellence.Randomizers.Core.Configurations;
+using Excellence.Randomizers.Core.RandomGenerators;
+using Excellence.Randomizers.Core.Shufflers;
 
 namespace Excellence.Randomizers
 {

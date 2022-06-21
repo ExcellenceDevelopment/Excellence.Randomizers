@@ -1,4 +1,4 @@
-﻿namespace Excellence.Randomizers.Core
+﻿namespace Excellence.Randomizers.Core.RandomGenerators
 {
     /// <summary>
     /// The random generator.

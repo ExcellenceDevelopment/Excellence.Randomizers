@@ -5,11 +5,11 @@
         <LangVersion>default</LangVersion>
         <Nullable>enable</Nullable>
 
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <IsPackable>true</IsPackable>
         <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
         <PackageId>Excellence.Randomizers</PackageId>
-        <PackageVersion>1.0.0</PackageVersion>
+        <PackageVersion>2.0.0</PackageVersion>
         <Title>Excellence.Randomizers</Title>
         <Authors>Excellence Development;Roman Doskoch</Authors>
         <Description>Default implementation of Randomizers.</Description>
@@ -43,6 +43,7 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     </ItemGroup>
 
     <ItemGroup>

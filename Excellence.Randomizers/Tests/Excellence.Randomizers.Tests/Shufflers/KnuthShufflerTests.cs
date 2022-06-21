@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 
-using Excellence.Randomizers.Core;
+using Excellence.Randomizers.Core.RandomGenerators;
+using Excellence.Randomizers.Core.Shufflers;
+using Excellence.Randomizers.RandomGenerators;
+using Excellence.Randomizers.Shufflers;
 
 using Xunit;
 
-namespace Excellence.Randomizers.Tests
+namespace Excellence.Randomizers.Tests.Shufflers
 {
     public class KnuthShufflerTests
     {
@@ -51,7 +54,7 @@ namespace Excellence.Randomizers.Tests
 
             var collection = new List<int>() { 1, 2, 3, 4, 5 };
 
-            var result= sut.Shuffle(collection).ToList();
+            var result = sut.Shuffle(collection).ToList();
 
             Assert.Equal(result.Count, collection.Count);
         }

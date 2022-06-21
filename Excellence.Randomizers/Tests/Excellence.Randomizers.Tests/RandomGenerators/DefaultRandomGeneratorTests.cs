@@ -1,11 +1,12 @@
 ﻿using System;
 
 using Excellence.Randomizers.Constants;
-using Excellence.Randomizers.Core;
+using Excellence.Randomizers.Core.RandomGenerators;
+using Excellence.Randomizers.RandomGenerators;
 
 using Xunit;
 
-namespace Excellence.Randomizers.Tests
+namespace Excellence.Randomizers.Tests.RandomGenerators
 {
     public class DefaultRandomGeneratorTests
     {

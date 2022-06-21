@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 namespace Excellence.Randomizers.Configurations.Core
 {
     /// <inheritdoc cref="IConfigurationCore{TItem, TConfiguration}" />
-    /// <inheritdoc cref="IConfigurationCoreJsonUtils{TItem,TConfiguration}" />
+    /// <inheritdoc cref="IConfigurationCoreJsonUtils{TItem, TConfiguration}" />
     public class ConfigurationCoreComplete<TItem, TConfiguration> :
         ConfigurationCore<TItem, TConfiguration>,
         IConfigurationCoreJsonUtils<TItem, TConfiguration>

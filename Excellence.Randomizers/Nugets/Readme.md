@@ -49,8 +49,16 @@ var configuration2 = new Configuration<int>()
 
 // or
 
-var configuration3 = new Configuration<int>();
-configuration3.Use(new List<int>() { 1, 3, 5, 7, 9 }, 2, 4, false);
+var configuration3 = new Configuration<int>()
+    .UseFromJson
+    (
+        "{ "
+        + "\"Items\": [1, 3, 5, 7, 9], "
+        + "\"MinCount\": 2, "
+        + "\"MaxCount\": 4, "
+        + "\"UniqueOnly\": false"
+        + " }"
+    );
 ```
 
 <br/>

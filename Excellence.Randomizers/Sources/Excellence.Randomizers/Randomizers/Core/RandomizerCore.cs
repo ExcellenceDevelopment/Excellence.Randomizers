@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Excellence.Randomizers.Constants;
-using Excellence.Randomizers.Core;
+using Excellence.Randomizers.Core.Configurations.Core;
+using Excellence.Randomizers.Core.RandomGenerators;
+using Excellence.Randomizers.Core.Shufflers;
 using Excellence.Randomizers.Utils;
 
-namespace Excellence.Randomizers
+namespace Excellence.Randomizers.Core
 {
     /// <inheritdoc />
     public class RandomizerCore<TItem, TConfiguration, TRandomizer> : IRandomizerCore<TItem, TConfiguration, TRandomizer>

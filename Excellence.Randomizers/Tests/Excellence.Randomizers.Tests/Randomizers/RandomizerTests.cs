@@ -1,7 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
+using Excellence.Randomizers.Configurations;
 using Excellence.Randomizers.Core;
+using Excellence.Randomizers.Core.Configurations;
+using Excellence.Randomizers.Core.RandomGenerators;
+using Excellence.Randomizers.Core.Shufflers;
+using Excellence.Randomizers.RandomGenerators;
+using Excellence.Randomizers.RandomizerFactories;
+using Excellence.Randomizers.Shufflers;
 
 using Xunit;
 
@@ -55,11 +62,18 @@ namespace Excellence.Randomizers.Tests
                 .UseMaxCount(5)
                 .UseUnique(true);
 
+            // or
+
             var configuration3 = new Configuration<int>()
-                .UseItems(new List<int>() { 1, 3, 5, 7, 9 })
-                .UseMinCount(2)
-                .UseMaxCount(4)
-                .UseUnique(false);
+                .UseFromJson
+                (
+                    "{ "
+                    + "\"Items\": [1, 3, 5, 7, 9], "
+                    + "\"MinCount\": 2, "
+                    + "\"MaxCount\": 4, "
+                    + "\"UniqueOnly\": false"
+                    + " }"
+                );
 
             var randomGenerator = new DefaultRandomGenerator();
             var shuffler = new KnuthShuffler(randomGenerator);

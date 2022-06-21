@@ -4,82 +4,82 @@
         <name>Excellence.Randomizers.Core</name>
     </assembly>
     <members>
-        <member name="T:Excellence.Randomizers.Core.IConfigurationCore`2">
+        <member name="T:Excellence.Randomizers.Core.Configurations.Core.IConfigurationCore`2">
             <summary>
             The core configuration.
             </summary>
             <typeparam name="TItem">The item type.</typeparam>
             <typeparam name="TConfiguration">The configuration type.</typeparam>
         </member>
-        <member name="P:Excellence.Randomizers.Core.IConfigurationCore`2.Items">
+        <member name="P:Excellence.Randomizers.Core.Configurations.Core.IConfigurationCore`2.Items">
             <summary>
             The items.
             </summary>
         </member>
-        <member name="P:Excellence.Randomizers.Core.IConfigurationCore`2.MinCount">
+        <member name="P:Excellence.Randomizers.Core.Configurations.Core.IConfigurationCore`2.MinCount">
             <summary>
             The minimum number of items (inclusive).
             </summary>
         </member>
-        <member name="P:Excellence.Randomizers.Core.IConfigurationCore`2.MaxCount">
+        <member name="P:Excellence.Randomizers.Core.Configurations.Core.IConfigurationCore`2.MaxCount">
             <summary>
             The maximum number of items (inclusive).
             </summary>
         </member>
-        <member name="P:Excellence.Randomizers.Core.IConfigurationCore`2.UniqueOnly">
+        <member name="P:Excellence.Randomizers.Core.Configurations.Core.IConfigurationCore`2.UniqueOnly">
             <summary>
             Indicates if unique items should be used in the resulting set.
             </summary>
         </member>
-        <member name="M:Excellence.Randomizers.Core.IConfigurationCore`2.UseItems(System.Collections.Generic.IEnumerable{`0})">
+        <member name="M:Excellence.Randomizers.Core.Configurations.Core.IConfigurationCore`2.UseItems(System.Collections.Generic.IEnumerable{`0})">
             <summary>
             Adds the items.
             </summary>
             <param name="items">The items.</param>
             <returns>The current instance.</returns>
         </member>
-        <member name="M:Excellence.Randomizers.Core.IConfigurationCore`2.UseItems(`0[])">
+        <member name="M:Excellence.Randomizers.Core.Configurations.Core.IConfigurationCore`2.UseItems(`0[])">
             <summary>
             Adds the items.
             </summary>
             <param name="items">The items.</param>
             <returns>The current instance.</returns>
         </member>
-        <member name="M:Excellence.Randomizers.Core.IConfigurationCore`2.UseMinCount(System.Int32)">
+        <member name="M:Excellence.Randomizers.Core.Configurations.Core.IConfigurationCore`2.UseMinCount(System.Int32)">
             <summary>
             Sets the minimum number of items (inclusive).
             </summary>
             <param name="minCount">The minimum number of items (inclusive).</param>
             <returns>The current instance.</returns>
         </member>
-        <member name="M:Excellence.Randomizers.Core.IConfigurationCore`2.UseMaxCount(System.Int32)">
+        <member name="M:Excellence.Randomizers.Core.Configurations.Core.IConfigurationCore`2.UseMaxCount(System.Int32)">
             <summary>
             Sets the maximum number of items (inclusive).
             </summary>
             <param name="maxCount">The maximum number of items (inclusive).</param>
             <returns>The current instance.</returns>
         </member>
-        <member name="M:Excellence.Randomizers.Core.IConfigurationCore`2.UseUnique(System.Boolean)">
+        <member name="M:Excellence.Randomizers.Core.Configurations.Core.IConfigurationCore`2.UseUnique(System.Boolean)">
             <summary>
             Sets if unique items should be used in the resulting set.
             </summary>
             <param name="uniqueOnly"><see langword="true"/> when only unique (non-repeating) items should be used in the resulting set or <see langword="false"/> when repeats are allowed.</param>
             <returns>The current instance.</returns>
         </member>
-        <member name="M:Excellence.Randomizers.Core.IConfigurationCore`2.Copy">
+        <member name="M:Excellence.Randomizers.Core.Configurations.Core.IConfigurationCore`2.Copy">
             <summary>
             Copies the configuration.
             </summary>
             <returns>The new instance.</returns>
         </member>
-        <member name="T:Excellence.Randomizers.Core.IConfigurationCoreJsonUtils`2">
+        <member name="T:Excellence.Randomizers.Core.Configurations.Core.IConfigurationCoreJsonUtils`2">
             <summary>
             The core configuration JSON utils.
             </summary>
             <typeparam name="TItem">The item type.</typeparam>
             <typeparam name="TConfiguration">The configuration type.</typeparam>
         </member>
-        <member name="M:Excellence.Randomizers.Core.IConfigurationCoreJsonUtils`2.UseFromJson(System.String,Newtonsoft.Json.JsonSerializerSettings)">
+        <member name="M:Excellence.Randomizers.Core.Configurations.Core.IConfigurationCoreJsonUtils`2.UseFromJson(System.String,Newtonsoft.Json.JsonSerializerSettings)">
             <summary>
             Sets configuration properties from JSON.
             </summary>
@@ -87,18 +87,18 @@
             <param name="jsonSerializerSettings">The serializer settings.</param>
             <returns></returns>
         </member>
-        <member name="T:Excellence.Randomizers.Core.IConfiguration`1">
+        <member name="T:Excellence.Randomizers.Core.Configurations.IConfiguration`1">
             <summary>
             The configuration.
             </summary>
             <typeparam name="TItem">The item type.</typeparam>
         </member>
-        <member name="T:Excellence.Randomizers.Core.IRandomGenerator">
+        <member name="T:Excellence.Randomizers.Core.RandomGenerators.IRandomGenerator">
             <summary>
             The random generator.
             </summary>
         </member>
-        <member name="M:Excellence.Randomizers.Core.IRandomGenerator.GetInt32(System.Int32,System.Int32)">
+        <member name="M:Excellence.Randomizers.Core.RandomGenerators.IRandomGenerator.GetInt32(System.Int32,System.Int32)">
             <summary>
             Generates random Int32 number.
             </summary>
@@ -106,23 +106,17 @@
             <param name="max">The max value (inclusive).</param>
             <returns>The random Int32 value.</returns>
         </member>
-        <member name="T:Excellence.Randomizers.Core.IRandomizerFactory">
+        <member name="T:Excellence.Randomizers.Core.RandomizerFactories.IRandomizerFactory">
             <summary>
             The randomizer factory.
             </summary>
         </member>
-        <member name="M:Excellence.Randomizers.Core.IRandomizerFactory.CreateRandomizer``1">
+        <member name="M:Excellence.Randomizers.Core.RandomizerFactories.IRandomizerFactory.CreateRandomizer``1">
             <summary>
             Creates the randomizer.
             </summary>
             <typeparam name="TItem">The item type.</typeparam>
             <returns>The randomizer.</returns>
-        </member>
-        <member name="T:Excellence.Randomizers.Core.IRandomizer`1">
-            <summary>
-            The randomizer.
-            </summary>
-            <typeparam name="TItem">The item type.</typeparam>
         </member>
         <member name="T:Excellence.Randomizers.Core.IRandomizerCore`3">
             <summary>
@@ -175,12 +169,18 @@
             </summary>
             <returns>The new instance that has the same configuration as the current one.</returns>
         </member>
-        <member name="T:Excellence.Randomizers.Core.IShuffler">
+        <member name="T:Excellence.Randomizers.Core.IRandomizer`1">
+            <summary>
+            The randomizer.
+            </summary>
+            <typeparam name="TItem">The item type.</typeparam>
+        </member>
+        <member name="T:Excellence.Randomizers.Core.Shufflers.IShuffler">
             <summary>
             The shuffler
             </summary>
         </member>
-        <member name="M:Excellence.Randomizers.Core.IShuffler.Shuffle``1(System.Collections.Generic.IEnumerable{``0})">
+        <member name="M:Excellence.Randomizers.Core.Shufflers.IShuffler.Shuffle``1(System.Collections.Generic.IEnumerable{``0})">
             <summary>
             Shuffles the collection.
             </summary>

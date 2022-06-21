@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Excellence.Randomizers.Constants;
-using Excellence.Randomizers.Core;
+using Excellence.Randomizers.Core.Configurations.Core;
 using Excellence.Randomizers.Utils;
 
 using Newtonsoft.Json;
 
-namespace Excellence.Randomizers
+namespace Excellence.Randomizers.Configurations.Core
 {
     /// <inheritdoc />
     public class ConfigurationCore<TItem, TConfiguration> : IConfigurationCore<TItem, TConfiguration>

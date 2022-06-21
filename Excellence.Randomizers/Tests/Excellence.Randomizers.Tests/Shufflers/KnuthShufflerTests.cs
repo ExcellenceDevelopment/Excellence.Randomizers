@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 
-using Excellence.Randomizers.Core;
+using Excellence.Randomizers.Core.RandomGenerators;
+using Excellence.Randomizers.Core.Shufflers;
+using Excellence.Randomizers.RandomGenerators;
+using Excellence.Randomizers.Shufflers;
 
 using Xunit;
 
-namespace Excellence.Randomizers.Tests
+namespace Excellence.Randomizers.Tests.Shufflers
 {
     public class KnuthShufflerTests
     {

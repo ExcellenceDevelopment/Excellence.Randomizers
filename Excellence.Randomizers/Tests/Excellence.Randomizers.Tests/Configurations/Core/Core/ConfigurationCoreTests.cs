@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using Excellence.Randomizers.Configurations.Core;
 using Excellence.Randomizers.Constants;
-using Excellence.Randomizers.Core;
+using Excellence.Randomizers.Core.Configurations.Core;
 
 using Xunit;
 
-namespace Excellence.Randomizers.Tests
+namespace Excellence.Randomizers.Tests.Configurations.Core
 {
     public class ConfigurationTests
     {

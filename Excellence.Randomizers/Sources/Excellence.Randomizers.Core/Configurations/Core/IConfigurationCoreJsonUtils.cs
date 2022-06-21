@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Excellence.Randomizers.Core
+namespace Excellence.Randomizers.Core.Configurations.Core
 {
     /// <summary>
     /// The core configuration JSON utils.
@@ -9,7 +9,7 @@ namespace Excellence.Randomizers.Core
     /// <typeparam name="TConfiguration">The configuration type.</typeparam>
     public interface IConfigurationCoreJsonUtils<TItem, out TConfiguration> :
         IConfigurationCore<TItem, TConfiguration>
-        where TConfiguration : IConfigurationCore<TItem, TConfiguration>
+        where TConfiguration : IConfigurationCoreJsonUtils<TItem, TConfiguration>
     {
         /// <summary>
         /// Sets configuration properties from JSON.

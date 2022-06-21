@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Excellence.Randomizers.Core
+namespace Excellence.Randomizers.Core.Configurations.Core
 {
     /// <summary>
     /// The core configuration.

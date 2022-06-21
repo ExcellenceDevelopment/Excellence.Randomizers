@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 
+using Excellence.Randomizers.Core.Configurations.Core;
+
 namespace Excellence.Randomizers.Core
 {
     /// <summary>

@@ -1,6 +1,7 @@
-﻿using Excellence.Randomizers.Core;
+﻿using Excellence.Randomizers.Configurations.Core;
+using Excellence.Randomizers.Core.Configurations.Core;
 
-namespace Excellence.Randomizers.Tests
+namespace Excellence.Randomizers.Tests.Configurations.Core
 {
     public abstract class ConfigurationCoreCompleteTestsBase
     {

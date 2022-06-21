@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xunit;
 
-namespace Excellence.Randomizers.Tests
+namespace Excellence.Randomizers.Tests.Configurations.Core
 {
     public class ConfigurationCoreJsonUtilsTests : ConfigurationCoreCompleteTestsBase
     {

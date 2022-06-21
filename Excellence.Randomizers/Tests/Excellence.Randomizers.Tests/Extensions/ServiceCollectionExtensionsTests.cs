@@ -1,7 +1,12 @@
 ﻿using System;
 
-using Excellence.Randomizers.Core;
+using Excellence.Randomizers.Core.RandomGenerators;
+using Excellence.Randomizers.Core.RandomizerFactories;
+using Excellence.Randomizers.Core.Shufflers;
 using Excellence.Randomizers.Extensions;
+using Excellence.Randomizers.RandomGenerators;
+using Excellence.Randomizers.RandomizerFactories;
+using Excellence.Randomizers.Shufflers;
 
 using Microsoft.Extensions.DependencyInjection;
 

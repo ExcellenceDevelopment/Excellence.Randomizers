@@ -5,11 +5,11 @@
         <LangVersion>default</LangVersion>
         <Nullable>enable</Nullable>
 
-        <AssemblyVersion>2.0.1.0</AssemblyVersion>
+        <AssemblyVersion>2.0.2.0</AssemblyVersion>
         <IsPackable>true</IsPackable>
         <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
         <PackageId>Excellence.Randomizers</PackageId>
-        <PackageVersion>2.0.1</PackageVersion>
+        <PackageVersion>2.0.2</PackageVersion>
         <Title>Excellence.Randomizers</Title>
         <Authors>Excellence Development;Roman Doskoch</Authors>
         <Description>Default implementation of Randomizers.</Description>

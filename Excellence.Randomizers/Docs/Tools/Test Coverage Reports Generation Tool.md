@@ -2,7 +2,7 @@
 
 To install dotnet tool for test reports generation open command line and run this command:
 
-`dotnet tool install -g dotnet-reportgenerator-globaltool --version 5.1.5`
+`dotnet tool install -g dotnet-reportgenerator-globaltool --version 5.1.10`
 
 <br />
 

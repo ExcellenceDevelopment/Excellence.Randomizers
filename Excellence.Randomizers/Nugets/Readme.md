@@ -7,10 +7,10 @@
 - [Overview](#overview)
 - [Configurations](#configurations)
 - [Randomizers](#randomizers)
-  - [Create a randomizer](#create-a-randomizer)
-  - [Add configurations](#add-configurations)
-  - [Create resulting sets](#create-resulting-sets)
-  - [`Copy`](#copy)
+    - [Create a randomizer](#create-a-randomizer)
+    - [Add configurations](#add-configurations)
+    - [Create resulting sets](#create-resulting-sets)
+    - [`Copy`](#copy)
 
 <br/>
 
@@ -122,7 +122,8 @@ var randomSets = randomizer.Next(5);
 
 ### `Copy`
 
-`Copy` copies the randomizers with all configurations and returns a new randomizer instance. Instances are independent and adding configuration to one randomizer does not affect another one.
+`Copy` copies the randomizers with all configurations and returns a new randomizer instance. Instances are independent and adding configuration to one randomizer does not
+affect another one.
 
 **Example**:
 

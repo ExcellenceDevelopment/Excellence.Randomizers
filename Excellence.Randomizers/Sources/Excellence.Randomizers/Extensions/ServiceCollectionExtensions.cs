@@ -9,6 +9,7 @@ using Excellence.Randomizers.Shufflers;
 using Excellence.Randomizers.Utils;
 
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Excellence.Randomizers.Extensions
 {
@@ -27,9 +28,9 @@ namespace Excellence.Randomizers.Extensions
         {
             ExceptionUtils.Process(services, ExceptionUtils.IsNull, () => new ArgumentNullException(nameof(services)));
 
-            services.AddSingleton<IRandomGenerator, DefaultRandomGenerator>();
-            services.AddSingleton<IShuffler, KnuthShuffler>();
-            services.AddSingleton<IRandomizerFactory, RandomizerFactory>();
+            services.TryAddSingleton<IRandomGenerator, DefaultRandomGenerator>();
+            services.TryAddSingleton<IShuffler, KnuthShuffler>();
+            services.TryAddSingleton<IRandomizerFactory, RandomizerFactory>();
 
             return services;
         }

@@ -20,18 +20,18 @@ namespace Excellence.Randomizers.Extensions
         /// <summary>
         /// Adds the dependencies needed for the the randomizers.
         /// </summary>
-        /// <param name="serviceCollection">The service collection.</param>
+        /// <param name="services">The services.</param>
         /// <returns>The passed <see cref="IServiceCollection"/> instance with the added dependencies.</returns>
         /// <exception cref="ArgumentNullException">The exception when the argument is <see langword="null"/>.</exception>
-        public static IServiceCollection AddRandomizers(this IServiceCollection serviceCollection)
+        public static IServiceCollection AddRandomizers(this IServiceCollection services)
         {
-            ExceptionUtils.Process(serviceCollection, ExceptionUtils.IsNull, () => new ArgumentNullException(nameof(serviceCollection)));
+            ExceptionUtils.Process(services, ExceptionUtils.IsNull, () => new ArgumentNullException(nameof(services)));
 
-            serviceCollection.AddSingleton<IRandomGenerator, DefaultRandomGenerator>();
-            serviceCollection.AddSingleton<IShuffler, KnuthShuffler>();
-            serviceCollection.AddSingleton<IRandomizerFactory, RandomizerFactory>();
+            services.AddSingleton<IRandomGenerator, DefaultRandomGenerator>();
+            services.AddSingleton<IShuffler, KnuthShuffler>();
+            services.AddSingleton<IRandomizerFactory, RandomizerFactory>();
 
-            return serviceCollection;
+            return services;
         }
     }
 }

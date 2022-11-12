@@ -1,7 +1,4 @@
-﻿using System;
-
-using Excellence.Randomizers.Core.Configurations.Core;
-using Excellence.Randomizers.Utils;
+﻿using Excellence.Randomizers.Core.Configurations.Core;
 
 using Newtonsoft.Json;
 
@@ -19,7 +16,7 @@ namespace Excellence.Randomizers.Configurations.Core
         /// <inheritdoc />
         public virtual TConfiguration UseFromJson(string json, JsonSerializerSettings? jsonSerializerSettings = null)
         {
-            ExceptionUtils.Process(json, ExceptionUtils.IsNull, () => new ArgumentNullException(nameof(json)));
+            ArgumentNullException.ThrowIfNull(json);
 
             JsonConvert.PopulateObject(json, this, jsonSerializerSettings);
 

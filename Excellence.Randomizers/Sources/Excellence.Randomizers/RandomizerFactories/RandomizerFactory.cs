@@ -1,10 +1,7 @@
-﻿using System;
-
-using Excellence.Randomizers.Core;
+﻿using Excellence.Randomizers.Core;
 using Excellence.Randomizers.Core.RandomGenerators;
 using Excellence.Randomizers.Core.RandomizerFactories;
 using Excellence.Randomizers.Core.Shufflers;
-using Excellence.Randomizers.Utils;
 
 namespace Excellence.Randomizers.RandomizerFactories
 {
@@ -16,8 +13,8 @@ namespace Excellence.Randomizers.RandomizerFactories
 
         public RandomizerFactory(IRandomGenerator randomGenerator, IShuffler shuffler)
         {
-            ExceptionUtils.Process(randomGenerator, ExceptionUtils.IsNull, () => new ArgumentNullException(nameof(randomGenerator)));
-            ExceptionUtils.Process(shuffler, ExceptionUtils.IsNull, () => new ArgumentNullException(nameof(shuffler)));
+            ArgumentNullException.ThrowIfNull(randomGenerator);
+            ArgumentNullException.ThrowIfNull(shuffler);
 
             this.RandomGenerator = randomGenerator;
             this.Shuffler = shuffler;

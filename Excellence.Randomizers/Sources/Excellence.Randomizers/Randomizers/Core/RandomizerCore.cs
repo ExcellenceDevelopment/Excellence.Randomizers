@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Excellence.Randomizers.Constants;
+﻿using Excellence.Randomizers.Constants;
 using Excellence.Randomizers.Core.Configurations.Core;
 using Excellence.Randomizers.Core.RandomGenerators;
 using Excellence.Randomizers.Core.Shufflers;
-using Excellence.Randomizers.Utils;
 
 namespace Excellence.Randomizers.Core
 {
@@ -28,8 +23,8 @@ namespace Excellence.Randomizers.Core
 
         public RandomizerCore(IRandomGenerator randomGenerator, IShuffler shuffler)
         {
-            ExceptionUtils.Process(randomGenerator, ExceptionUtils.IsNull, () => new ArgumentNullException(nameof(randomGenerator)));
-            ExceptionUtils.Process(shuffler, ExceptionUtils.IsNull, () => new ArgumentNullException(nameof(shuffler)));
+            ArgumentNullException.ThrowIfNull(randomGenerator);
+            ArgumentNullException.ThrowIfNull(shuffler);
 
             this.RandomGenerator = randomGenerator;
             this.Shuffler = shuffler;
@@ -38,15 +33,18 @@ namespace Excellence.Randomizers.Core
         /// <inheritdoc />
         public virtual TRandomizer Use(IEnumerable<TConfiguration> configurations)
         {
-            var configurationsList = configurations?.ToList();
+            ArgumentNullException.ThrowIfNull(configurations);
 
-            ExceptionUtils.Process(configurationsList, ExceptionUtils.IsNull, () => new ArgumentNullException(nameof(configurations)));
+            var configurationsList = configurations.ToList();
 
-            var validationMessage = this.ValidateConfigurations(configurationsList!);
+            var validationMessage = this.ValidateConfigurations(configurationsList);
 
-            ExceptionUtils.Process(validationMessage, p => !String.IsNullOrEmpty(p), () => new ArgumentException(validationMessage));
+            if (!String.IsNullOrEmpty(validationMessage))
+            {
+                throw new ArgumentException(validationMessage);
+            }
 
-            foreach (var configuration in configurationsList!)
+            foreach (var configuration in configurationsList)
             {
                 this.Configurations.Add(configuration.Copy());
             }

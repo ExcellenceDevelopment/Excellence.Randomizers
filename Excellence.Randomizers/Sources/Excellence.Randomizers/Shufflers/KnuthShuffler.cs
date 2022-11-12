@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Excellence.Randomizers.Core.RandomGenerators;
+﻿using Excellence.Randomizers.Core.RandomGenerators;
 using Excellence.Randomizers.Core.Shufflers;
-using Excellence.Randomizers.Utils;
 
 namespace Excellence.Randomizers.Shufflers
 {
@@ -15,7 +10,7 @@ namespace Excellence.Randomizers.Shufflers
 
         public KnuthShuffler(IRandomGenerator randomGenerator)
         {
-            ExceptionUtils.Process(randomGenerator, ExceptionUtils.IsNull, () => new ArgumentNullException(nameof(randomGenerator)));
+            ArgumentNullException.ThrowIfNull(randomGenerator);
 
             this.RandomGenerator = randomGenerator;
         }
@@ -23,9 +18,9 @@ namespace Excellence.Randomizers.Shufflers
         /// <inheritdoc />
         public virtual IEnumerable<TItem> Shuffle<TItem>(IEnumerable<TItem> source)
         {
-            var list = source?.ToList();
+            ArgumentNullException.ThrowIfNull(source);
 
-            ExceptionUtils.Process(list, ExceptionUtils.IsNull, () => new ArgumentNullException(nameof(source)));
+            var list = source?.ToList();
 
             for (var index = 0; index < list!.Count - 1; index++)
             {

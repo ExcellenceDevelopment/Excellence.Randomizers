@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Excellence.Randomizers.Core.RandomGenerators;
+﻿using Excellence.Randomizers.Core.RandomGenerators;
 using Excellence.Randomizers.Core.Shufflers;
 using Excellence.Randomizers.RandomGenerators;
 using Excellence.Randomizers.Shufflers;

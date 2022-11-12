@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Excellence.Randomizers.Core.Shufflers
+﻿namespace Excellence.Randomizers.Core.Shufflers
 {
     /// <summary>
     /// The shuffler

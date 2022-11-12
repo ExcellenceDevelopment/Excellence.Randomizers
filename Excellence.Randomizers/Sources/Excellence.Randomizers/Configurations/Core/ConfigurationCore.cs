@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Excellence.Randomizers.Constants;
+﻿using Excellence.Randomizers.Constants;
 using Excellence.Randomizers.Core.Configurations.Core;
-using Excellence.Randomizers.Utils;
 
 using Newtonsoft.Json;
 
@@ -33,11 +28,11 @@ namespace Excellence.Randomizers.Configurations.Core
         /// <inheritdoc />
         public virtual TConfiguration UseItems(IEnumerable<TItem> items)
         {
-            var itemsCollection = items?.ToList();
+            ArgumentNullException.ThrowIfNull(items);
 
-            ExceptionUtils.Process(itemsCollection, ExceptionUtils.IsNull, () => new ArgumentNullException(nameof(items)));
+            var itemsCollection = items.ToList();
 
-            this.Items = this.Items.Concat(itemsCollection!);
+            this.Items = this.Items.Concat(itemsCollection);
 
             return (TConfiguration)(object)this;
         }
@@ -49,7 +44,10 @@ namespace Excellence.Randomizers.Configurations.Core
         /// <inheritdoc />
         public virtual TConfiguration UseMinCount(int minCount)
         {
-            ExceptionUtils.Process(minCount, (param) => param < 0, () => new ArgumentException(String.Format(Messages.Errors.LessThanZero, nameof(minCount))));
+            if (minCount < 0)
+            {
+                throw new ArgumentException(String.Format(Messages.Errors.LessThanZero, nameof(minCount)));
+            }
 
             this.MinCount = minCount;
 
@@ -59,7 +57,10 @@ namespace Excellence.Randomizers.Configurations.Core
         /// <inheritdoc />
         public virtual TConfiguration UseMaxCount(int maxCount)
         {
-            ExceptionUtils.Process(maxCount, (param) => param < 0, () => new ArgumentException(String.Format(Messages.Errors.LessThanZero, nameof(maxCount))));
+            if (maxCount < 0)
+            {
+                throw new ArgumentException(String.Format(Messages.Errors.LessThanZero, nameof(maxCount)));
+            }
 
             this.MaxCount = maxCount;
 

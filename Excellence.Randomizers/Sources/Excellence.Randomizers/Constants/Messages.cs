@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Excellence.Randomizers.Constants
+﻿namespace Excellence.Randomizers.Constants
 {
     /// <summary>
     /// The messages.

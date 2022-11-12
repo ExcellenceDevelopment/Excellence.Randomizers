@@ -1,6 +1,4 @@
-﻿using System;
-
-using Excellence.Randomizers.Constants;
+﻿using Excellence.Randomizers.Constants;
 using Excellence.Randomizers.Core.RandomGenerators;
 using Excellence.Randomizers.RandomGenerators;
 

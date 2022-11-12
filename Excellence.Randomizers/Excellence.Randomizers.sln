@@ -17,7 +17,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{89AA548D-1BFA-4306-A863-0C6B033DCF9C}"
 	ProjectSection(SolutionItems) = preProject
 		Docs\Tools\Docs Generation Tools.md = Docs\Tools\Docs Generation Tools.md
-		Docs\Tools\Test Coverage Reports Generation Tool.md = Docs\Tools\Test Coverage Reports Generation Tool.md
+		Docs\Tools\Test Coverage Reports Generation Tools.md = Docs\Tools\Test Coverage Reports Generation Tools.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{A2DBAFCD-BAB0-47D2-9DAD-468758AF9259}"

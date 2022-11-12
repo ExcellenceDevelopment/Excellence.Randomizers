@@ -1,9 +1,6 @@
-﻿using System;
-
-using Excellence.Randomizers.Constants;
+﻿using Excellence.Randomizers.Constants;
 using Excellence.Randomizers.Core.RandomGenerators;
 using Excellence.Randomizers.Providers;
-using Excellence.Randomizers.Utils;
 
 namespace Excellence.Randomizers.RandomGenerators
 {
@@ -13,7 +10,10 @@ namespace Excellence.Randomizers.RandomGenerators
         /// <inheritdoc />
         public virtual int GetInt32(int min, int max)
         {
-            ExceptionUtils.Process(() => min > max, () => new ArgumentException(String.Format(Messages.Errors.GreaterThan, nameof(min), nameof(max))));
+            if (min > max)
+            {
+                throw new ArgumentException(String.Format(Messages.Errors.GreaterThan, nameof(min), nameof(max)));
+            }
 
             return RandomProvider.Random.Value!.Next(min, max + 1);
         }

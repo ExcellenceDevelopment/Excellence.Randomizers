@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading;
-
-namespace Excellence.Randomizers.Providers
+﻿namespace Excellence.Randomizers.Providers
 {
     /// <summary>
     /// The random provider.

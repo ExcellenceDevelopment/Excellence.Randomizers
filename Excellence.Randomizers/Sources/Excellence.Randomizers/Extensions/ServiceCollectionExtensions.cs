@@ -8,28 +8,27 @@ using Excellence.Randomizers.Shufflers;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace Excellence.Randomizers.Extensions
+namespace Excellence.Randomizers.Extensions;
+
+/// <summary>
+/// The service collection extensions.
+/// </summary>
+public static class ServiceCollectionExtensions
 {
     /// <summary>
-    /// The service collection extensions.
+    /// Adds the dependencies needed for the the randomizers.
     /// </summary>
-    public static class ServiceCollectionExtensions
+    /// <param name="services">The services.</param>
+    /// <returns>The passed <see cref="IServiceCollection"/> instance with the added dependencies.</returns>
+    /// <exception cref="ArgumentNullException">The exception when the argument is <see langword="null"/>.</exception>
+    public static IServiceCollection AddRandomizers(this IServiceCollection services)
     {
-        /// <summary>
-        /// Adds the dependencies needed for the the randomizers.
-        /// </summary>
-        /// <param name="services">The services.</param>
-        /// <returns>The passed <see cref="IServiceCollection"/> instance with the added dependencies.</returns>
-        /// <exception cref="ArgumentNullException">The exception when the argument is <see langword="null"/>.</exception>
-        public static IServiceCollection AddRandomizers(this IServiceCollection services)
-        {
-            ArgumentNullException.ThrowIfNull(services);
+        ArgumentNullException.ThrowIfNull(services);
 
-            services.TryAddSingleton<IRandomGenerator, DefaultRandomGenerator>();
-            services.TryAddSingleton<IShuffler, KnuthShuffler>();
-            services.TryAddSingleton<IRandomizerFactory, RandomizerFactory>();
+        services.TryAddSingleton<IRandomGenerator, DefaultRandomGenerator>();
+        services.TryAddSingleton<IShuffler, KnuthShuffler>();
+        services.TryAddSingleton<IRandomizerFactory, RandomizerFactory>();
 
-            return services;
-        }
+        return services;
     }
 }

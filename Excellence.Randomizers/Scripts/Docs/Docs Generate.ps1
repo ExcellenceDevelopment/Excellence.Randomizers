@@ -1,7 +1,7 @@
 param
 (
     $configuration = "Release",
-    $framework = "net7.0"
+    $framework = "net8.0"
 );
 
 $solutionDirectoryPath = $PSCommandPath | Split-Path | Split-Path | Split-Path;

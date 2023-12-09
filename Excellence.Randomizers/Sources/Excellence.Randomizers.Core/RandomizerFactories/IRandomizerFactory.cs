@@ -1,15 +1,14 @@
-﻿namespace Excellence.Randomizers.Core.RandomizerFactories
+﻿namespace Excellence.Randomizers.Core.RandomizerFactories;
+
+/// <summary>
+/// The randomizer factory.
+/// </summary>
+public interface IRandomizerFactory
 {
     /// <summary>
-    /// The randomizer factory.
+    /// Creates the randomizer.
     /// </summary>
-    public interface IRandomizerFactory
-    {
-        /// <summary>
-        /// Creates the randomizer.
-        /// </summary>
-        /// <typeparam name="TItem">The item type.</typeparam>
-        /// <returns>The randomizer.</returns>
-        public IRandomizer<TItem> CreateRandomizer<TItem>();
-    }
+    /// <typeparam name="TItem">The item type.</typeparam>
+    /// <returns>The randomizer.</returns>
+    public IRandomizer<TItem> CreateRandomizer<TItem>();
 }

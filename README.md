@@ -1,7 +1,7 @@
 # Randomizers
 
-[![Main](https://flat.badgen.net/github/checks/ExcellenceDevelopment/Excellence.Randomizers/main/build-and-test?label=Main&cache=300)](https://github.com/ExcellenceDevelopment/Excellence.Randomizers/tree/main)
-[![Dev](https://flat.badgen.net/github/checks/ExcellenceDevelopment/Excellence.Randomizers/dev/build-and-test?label=Dev&cache=300)](https://github.com/ExcellenceDevelopment/Excellence.Randomizers/tree/dev)
+[![Main](https://flat.badgen.net/github/checks/ExcellenceDevelopment/Excellence.Randomizers/main/Build%20%26%20Test?label=Main&cache=300)](https://github.com/ExcellenceDevelopment/Excellence.Randomizers/tree/main)
+[![Dev](https://flat.badgen.net/github/checks/ExcellenceDevelopment/Excellence.Randomizers/dev/Build%20%26%20Test?label=Dev&cache=300)](https://github.com/ExcellenceDevelopment/Excellence.Randomizers/tree/dev)
 
 <br/>
 

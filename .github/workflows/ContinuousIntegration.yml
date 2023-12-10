@@ -2,18 +2,14 @@ name: Continuous Integration
 
 on:
     push:
-        branches: [ "main", "dev", "release" ]
+        branches: [ "main", "dev" ]
 
     pull_request:
-        branches: [ "main", "dev", "release" ]
+        branches: [ "main", "dev" ]
 
 jobs:
     build-and-test:
-        name: Build & Test
         runs-on: windows-latest
-        strategy:
-            matrix:
-                dotnet-version: [ "6.x.x", "7.x.x", "8.x.x" ]
 
         steps:
             - name: Checkout
@@ -22,7 +18,10 @@ jobs:
             - name: Install .NET
               uses: actions/setup-dotnet@v3
               with:
-                  dotnet-version: ${{ matrix.dotnet-version }}
+                  dotnet-version: |
+                      6.x.x
+                      7.x.x
+                      8.x.x
 
             - name: Run
               shell: pwsh

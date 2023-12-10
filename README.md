@@ -11,7 +11,6 @@ Randomizers create the set of items randomly selected and then shuffled from a p
  - `Excellence.Randomizers.Core` - interfaces for Randomizers ([Sources](./Excellence.Randomizers/Sources/Excellence.Randomizers.Core), [Nuget](https://www.nuget.org/packages/Excellence.Randomizers.Core/))
  - `Excellence.Randomizers` - default implementation of Randomizers ([Sources](./Excellence.Randomizers/Sources/Excellence.Randomizers), [Nuget](https://www.nuget.org/packages/Excellence.Randomizers/)) 
 
-
 ## References
 
   - [Docs](./Excellence.Randomizers/Docs)
